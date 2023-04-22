@@ -133,3 +133,17 @@ FROM employee AS e
 FULL OUTER JOIN dept d ON e.dept_id = d.dept_id;
 
 
+-- SELF JOIN -> Taking the coulmn join in the table itslef (its a tehnique and not a join as such
+-- Print all the manager of the employee
+SELECT e1.emp_id , e1.emp_name , e2.emp_name as Manager_name FROM 
+employee e1
+INNER JOIN employee e2 on e1.manager_id = e2.emp_id
+
+
+--Employee salary > Manager salary
+
+SELECT e1.emp_id , e1.emp_name , e2.emp_name as Manager_name FROM 
+employee e1
+INNER JOIN employee e2 on e1.manager_id = e2.emp_id
+WHERE e1.salary > e2.salary
+
