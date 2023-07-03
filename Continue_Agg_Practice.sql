@@ -60,6 +60,32 @@ WHERE Profit > 50
 GROUP BY Region
 ORDER BY Total_Sales DESC;
 
+-- HAVING Keyword -> Used for Aggregate function
+
+SELECT sub_category , sum(Sales) as total_sales
+FROM Orders
+GROUP BY Sub_Category
+HAVING SUM(Sales) > 100000 --HAVING works before SELECT because if we replace the SUM Agg func here with total_sales ,  it will give an error
+ORDER BY total_sales DESC;
+
+--HAVING Works similar to WHERE
+
+--WHERE is more efficient than HAVING becuse WHERE first filters and then executes the Query while in HAVING its vice verse. So WHERE is beter than HAVING
+
+SELECT sub_category , sum(Sales) as total_sales
+FROM Orders
+GROUP BY Sub_Category --GROUP is executed before HAVING
+HAVING Sub_Category = 'Phones' --Only condition that the column should be delared in the SELECT
+ORDER BY total_sales DESC;
+
+--Major difference beteen HAVING and WHERE is that for example we have to group sub categories and the AGG func is sum , 
+--Then WHERE first filters the data whereas HAVING first let it create the sum and then Filters the data
+
+--Any Aggregate function alwats ignores the NULL values
+
+
+
+
 
 
 
