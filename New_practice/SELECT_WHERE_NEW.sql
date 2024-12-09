@@ -47,7 +47,8 @@ WHERE cast(order_date AS DATE) = '2020-11-08'
 
 -- Making new column 
 
-SELECT *, profit/sales as Ratio FROM orders
+SELECT *, cast(profit as decimal)/sales as Ratio FROM orders
+
 
 
 
