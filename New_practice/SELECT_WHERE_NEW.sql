@@ -39,6 +39,16 @@ SELECT order_date, ship_mode , segment FROM orders
 WHERE ship_mode = 'First Class' or segment = 'Consumer'
 
 
+--Cast function -> Type casts the data type of the query
+
+SELECT cast(order_date AS DATE) AS order_new_date
+FROM orders
+WHERE cast(order_date AS DATE) = '2020-11-08'
+
+-- Making new column 
+
+SELECT *, profit/sales as Ratio FROM orders
+
 
 
 
