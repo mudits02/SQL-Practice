@@ -22,4 +22,8 @@ SELECT order_id, order_date, customer_name
 FROM orders
 WHERE UPPER(customer_name) LIKE '__L%A'; --First 2 can be anything , then l , then Anything , then A
 
+SELECT order_id, order_date, customer_name
+FROM orders
+WHERE customer_name ~ '^C[al].*';--Second character can either a or l
+
 
