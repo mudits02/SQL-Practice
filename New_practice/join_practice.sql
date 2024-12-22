@@ -38,11 +38,31 @@ SELECT * FROM employee;
 SELECT * FROM employee
 INNER JOIN dept on 100 = 100;
 
--- Inner Join , 9 entries coz 10th Entry Rakesh has a dept_id as 500 and it doesnt exist in dept
+-- Inner Join , 9 entries coz 10th Entry Rakesh has a dept_id as 500 and it doesnt exist in dept and also no dept id 400 there
 
 SELECT * FROM
 employee e
 INNER JOIN dept d ON e.dept_id = d.dep_id;
+
+-- Right Join, we wont have the Rakesh one row coz it is right join and all the entries of the right table and the common of the left will be available
+
+SELECT * FROM
+employee e
+RIGHT JOIN dept d ON e.dept_id = d.dep_id;
+
+-- Left Join, we wont have the 400 one coz it is left join and all entires of left table
+
+SELECT * FROM
+employee e
+LEFT JOIN dept d ON e.dept_id = d.dep_id;
+
+-- Full outer join, there in postgresql
+
+SELECT * FROM
+employee e
+FULL OUTER JOIN dept d ON e.dept_id = d.dep_id;
+
+
 
 
 
