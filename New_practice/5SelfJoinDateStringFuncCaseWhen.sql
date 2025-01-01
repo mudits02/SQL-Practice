@@ -19,6 +19,6 @@ INNER JOIN employee e2 ON e1.manager_id = e2.emp_id
 WHERE e1.salary >= e2.salary
 
 SELECT * FROM orders;
-
+SELECT * FROM employee;
 
 
