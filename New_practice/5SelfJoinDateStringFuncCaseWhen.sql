@@ -20,5 +20,5 @@ WHERE e1.salary >= e2.salary
 
 SELECT * FROM orders;
 SELECT * FROM employee;
-
+SELECT * FROM dept;
 
