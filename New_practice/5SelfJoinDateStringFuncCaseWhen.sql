@@ -18,7 +18,15 @@ employee e1
 INNER JOIN employee e2 ON e1.manager_id = e2.emp_id
 WHERE e1.salary >= e2.salary
 
-SELECT * FROM orders;
-SELECT * FROM employee;
-SELECT * FROM dept;
+-- String Functions in SQL
+
+SELECT dept_id , AVG(salary) as avg_salary
+FROM employee
+group by dept_id;
+
+-- Now in above we are aggregating the dept_id with avg salary basis using the AVG function
+-- Now if we want to print employee names to be printed
+
+
+
 

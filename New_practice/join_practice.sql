@@ -62,6 +62,12 @@ SELECT * FROM
 employee e
 FULL OUTER JOIN dept d ON e.dept_id = d.dep_id;
 
+SELECT DISTINCT o.order_id , o.product_id, r.return_reason
+FROM orders o
+RIGHT JOIN returns r on o.order_id = r.order_id;
+
+SELECT * FROM returns;
+
 
 
 
