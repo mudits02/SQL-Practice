@@ -74,3 +74,16 @@ GROUP BY sub_category
 HAVING SUM(sales) > 10000 -- total_sales > 10000 wont work as it is generated after compariosn
 ORDER BY total_sales DESC;
 
+
+-- In this example , we see that we can use HAVING clause instead of WHERE too but it is less efficient than where
+-- The reason is simple that 
+SELECT sub_category, SUM(sales) AS total_sales
+FROM orders
+WHERE profit > 50
+GROUP BY sub_category
+HAVING sub_category = 'Phones' -- total_sales > 10000 wont work as it is generated after compariosn
+ORDER BY total_sales DESC;
+
+-- HAVING always runs after GROUP BY has been executed
+
+
