@@ -79,3 +79,5 @@ FROM orders o
 LEFT JOIN returns r ON o.order_id = r.order_id
 GROUP BY o.city
 HAVING COUNT(r.order_id) = 0; -- Correct Answer
+
+-- Q7
