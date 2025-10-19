@@ -37,7 +37,7 @@ WHERE ship_mode = 'First Class' AND segment = 'Consumer';
 SELECT CAST(order_date AS TIME), * -- Typecast errors but changes the datatype while in runtime
 FROM orders;
 
--- Converting for the bewlo operations
+-- Converting for the below operations
 ALTER TABLE orders 
 ALTER COLUMN "profit" TYPE NUMERIC USING "profit"::NUMERIC;
 
